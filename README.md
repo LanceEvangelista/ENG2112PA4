@@ -21,11 +21,11 @@ This tells Python to create a variable or dataframe `df` with contents from the 
 
 In order to group the data based on the taker's hometown, we can use dataframe indexing, specifically by using boolean indexing.
 
-To group by takers from "Instrumentation" track and have a grade in Electronics greater than 70:
+To group by takers from the "Instrumentation" track and have a grade in Electronics greater than 70:
 
 ```python
 
-Intrsu = df[(df['Track'] == 'Instrumentation') & (df['Electronics'] > 70)] [['Name', 'GEAS', 'Electronics']]
+Instru = df[(df['Track'] == 'Instrumentation') & (df['Electronics'] > 70)] [['Name', 'GEAS', 'Electronics']]
 
 ```
 
