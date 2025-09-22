@@ -68,3 +68,11 @@ Mindy.to_csv("Mindy.csv")
 Instru.to_csv("Instru.csv")
 ```
 
+## Data Visualization
+
+First we import the mat plot library:
+
+```Python
+import matplotlib.pyplot as plt
+```
+
