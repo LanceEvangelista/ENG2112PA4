@@ -76,3 +76,34 @@ First we import the mat plot library:
 import matplotlib.pyplot as plt
 ```
 
+To create a plot we first use:
+
+`plt.fig(figsize=(x,y)`
+
+Each time this syntax is called, a new plot is create which allows the program to handle multiple plots.
+
+`plt.bar(xaxis, yaxis)`
+
+This tells the program to create a bar graph with the specific variables` data as the x and y axis
+
+Since we're graphing with the average scores, we again take the mean by: `df[numeric].mean(axis=1)` using the variable we created earlier.
+
+### To graph by Hometown:
+
+```Python
+plt.figure(figsize=(8, 5))
+plt.bar(df['Hometown'], df[numeric].mean(axis=1))
+```
+
+### To graph by Gender:
+
+```Python
+plt.figure(figsize=(8, 5))
+plt.bar(df['Gender'], df[numeric].mean(axis=1))
+```
+### To graph by Track:
+
+```Python
+plt.figure(figsize=(8, 5))
+plt.bar(df['Track'], df[numeric].mean(axis=1))
+```
