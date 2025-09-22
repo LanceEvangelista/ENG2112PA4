@@ -78,7 +78,7 @@ import matplotlib.pyplot as plt
 
 To create a plot we first use:
 
-`plt.fig(figsize=(x,y)`
+`plt.figure(figsize=(x,y))`
 
 Each time this syntax is called, a new plot is create which allows the program to handle multiple plots.
 
@@ -98,7 +98,7 @@ avg_track = df.groupby('Track')[numeric].mean()
 
 ```Python
 plt.figure(figsize=(8, 5))
-plt.bar(avg_gender.index(), avg_gender.mean(axis=1))
+plt.bar(avg_hometown.index, avg_hometown.mean(axis=1))
 ```
 Doing avg_gender.mean(axis=1) takes the averages of the 4 subjects and turns them into 1 overall average
 
@@ -106,11 +106,11 @@ Doing avg_gender.mean(axis=1) takes the averages of the 4 subjects and turns the
 
 ```Python
 plt.figure(figsize=(8, 5))
-plt.bar(avg_hometown.index(), avg_hometown.mean(axis=1))
+plt.bar(avg_gender.index, avg_gender.mean(axis=1))
 ```
 ### To graph by Track:
 
 ```Python
 plt.figure(figsize=(8, 5))
-plt.bar(avg_track.index(), avg_track.mean(axis=1))
+plt.bar(avg_track.index, avg_track.mean(axis=1))
 ```
