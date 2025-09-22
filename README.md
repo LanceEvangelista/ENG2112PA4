@@ -86,24 +86,31 @@ Each time this syntax is called, a new plot is create which allows the program t
 
 This tells the program to create a bar graph with the specific variables` data as the x and y axis
 
-Since we're graphing with the average scores, we again take the mean by: `df[numeric].mean(axis=1)` using the variable we created earlier.
+First, we group the data together based on their values by gender, by hometown and by track chosen using `groupby` and take their mean to easily compare later on
+
+```Python
+avg_gender = df.groupby('Gender')[numeric].mean()
+avg_hometown = df.groupby('Hometown')[numeric].mean()
+avg_track = df.groupby('Track')[numeric].mean()
+```
 
 ### To graph by Hometown:
 
 ```Python
 plt.figure(figsize=(8, 5))
-plt.bar(df['Hometown'], df[numeric].mean(axis=1))
+plt.bar(avg_gender.index(), avg_gender.mean(axis=1))
 ```
+Doing avg_gender.mean(axis=1) takes the averages of the 4 subjects and turns them into 1 overall average
 
 ### To graph by Gender:
 
 ```Python
 plt.figure(figsize=(8, 5))
-plt.bar(df['Gender'], df[numeric].mean(axis=1))
+plt.bar(avg_hometown.index(), avg_hometown.mean(axis=1))
 ```
 ### To graph by Track:
 
 ```Python
 plt.figure(figsize=(8, 5))
-plt.bar(df['Track'], df[numeric].mean(axis=1))
+plt.bar(avg_track.index(), avg_track.mean(axis=1))
 ```
