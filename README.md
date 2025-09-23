@@ -129,4 +129,6 @@ plt.bar(avg_track.index, avg_track.mean(axis=1))
 ```
 Using `avg_track.mean(axis=1)` takes the averages of the 4 subjects, using `axis=1` specifies the mean of the row should be taken, and turns them into 1 overall average.
 Using .index for the x-axis tells Python to use the indexes within the dataframe as the x-axis; in this case, the indexes are Communication, Instrumentation, and Microelectronics.
-V2
+
+
+V3
