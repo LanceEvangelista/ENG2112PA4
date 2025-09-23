@@ -67,31 +67,21 @@ In order to filter for Female students from Mindanao with an average score of 55
 `(df[numeric].mean(axis=1) >= 55)` Calculates the mean of each row using the list of columns we defined 'numeric' earlier. Then checks which is above or equal to 55
 
 
-to them as CSV files:
+### to them as CSV files:
 
 ```python
-Mindy.to_csv("Mindy.csv")
+Mindy.to_csv("Mindy.csv") #Saves dataframe Mindy as "Mindy.csv"
 
-Instru.to_csv("Instru.csv")
+Instru.to_csv("Instru.csv") #Saves dataframe Instru as "Instru.csv"
 ```
 
 ## Data Visualization
 
-First, we import the Matplotlib Library:
+First, we import the Matplotlib Library to handle the visualization of the data from the previous steps:
 
 ```Python
 import matplotlib.pyplot as plt
 ```
-
-To create a plot, we first use:
-
-`plt.figure(figsize=(x,y))`
-
-Each time this syntax is called, a new plot is created, which allows the program to handle multiple plots.
-
-`plt.bar(xaxis, yaxis)`
-
-This tells the program to create a bar graph with the specific variables` data as the x and y axes
 
 First, we group the data together based on their values by gender, by hometown, and by track chosen using `groupby`, and take their mean to easily compare later on
 
@@ -102,6 +92,17 @@ avg_track = df.groupby('Track')[numeric].mean()
 ```
 
 First, the program groups the data `df.groupby("Parameter")` then takes the mean of the numerical data within the group using `.mean()`
+
+### Creating Plots and Graphs
+To create a plot, we first use:
+
+`plt.figure(figsize=(x,y))`
+
+Each time this syntax is called, a new plot is created, which allows the program to handle multiple plots.
+
+`plt.bar(xaxis, yaxis)`
+
+This tells the program to create a bar graph with the specific variables` data as the x and y axes
 
 ### To graph by Hometown:
 
