@@ -17,6 +17,12 @@ This tells Python to create a variable or dataframe `df` with contents from the 
 
 ## Grouping and Indexing 
 
+To group the data, we will be using Pandas, as it can sort dataframes by their similar key values and can handle boolean indexing for scores.
+
+```Python
+import pandas as pd
+```
+
 ### By Track and Grade
 
 In order to group the data based on the taker's hometown, we can use dataframe indexing, specifically by using Boolean indexing,
