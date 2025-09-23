@@ -102,7 +102,7 @@ Each time this syntax is called, a new plot is created, which allows the program
 
 `plt.bar(xaxis, yaxis)`
 
-This tells the program to create a bar graph with the specific variables` data as the x and y axes
+This tells the program to create a bar graph with the specific variables' data as the x or y axes
 
 ### To graph by Hometown:
 
