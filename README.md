@@ -110,7 +110,8 @@ This tells the program to create a bar graph with the specific variables' data a
 plt.figure(figsize=(8, 5))
 plt.bar(avg_hometown.index, avg_hometown.mean(axis=1))
 ```
-Using `avg_gender.mean(axis=1)` takes the averages of the 4 subjects, using `axis=1` specifying the mean of the row should be taken, and turns them into 1 overall average.
+Using `avg_hometown.mean(axis=1)` takes the averages of the 4 subjects, using `axis=1` specifies the mean of the row should be taken, and turns them into 1 overall average.
+Using .index for the x-axis tells Python to use the indexes within the dataframe as the x-axis; in this case, the indexes are Luzon, Visayas, and Mindanao.
 
 ### To graph by Gender:
 
@@ -118,11 +119,14 @@ Using `avg_gender.mean(axis=1)` takes the averages of the 4 subjects, using `axi
 plt.figure(figsize=(8, 5))
 plt.bar(avg_gender.index, avg_gender.mean(axis=1))
 ```
+Using `avg_gender.mean(axis=1)` takes the averages of the 4 subjects, using `axis=1` specifies the mean of the row should be taken, and turns them into 1 overall average.
+Using .index for the x-axis tells Python to use the indexes within the dataframe as the x-axis; in this case, the indexes are Male and Female
 ### To graph by Track:
 
 ```Python
 plt.figure(figsize=(8, 5))
 plt.bar(avg_track.index, avg_track.mean(axis=1))
 ```
-
+Using `avg_track.mean(axis=1)` takes the averages of the 4 subjects, using `axis=1` specifies the mean of the row should be taken, and turns them into 1 overall average.
+Using .index for the x-axis tells Python to use the indexes within the dataframe as the x-axis; in this case, the indexes are Communication, Instrumentation, and Microelectronics.
 V2
